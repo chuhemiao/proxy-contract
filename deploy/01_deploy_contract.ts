@@ -23,8 +23,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     },
   };
 
-  const myContract = await deploy("StandardImpl", {
-    contract: "StandardImpl",
+  const myContract = await deploy("StandardImplv2", {
+    contract: "StandardImplv2",
     from: deployer,
     proxy: proxyOptions,
     args: [],

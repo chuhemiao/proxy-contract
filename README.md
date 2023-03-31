@@ -1,2 +1,10 @@
 # proxy-contract
 learn proxy-contract
+
+bnb testnet
+
+Addresses:
+    ProxyAdmin: 0xF2E8465F83b6e2AbE1db042bC610A83D2Ede092C
+    Proxy: 0x978516C6F1022eD24cc3699B1402F3E87F4dc121
+    ImplV1: 0x10eCD8342964f732760ef677DDf80ea20F9179f5
+    ImplV2: 0x9d1f8115B70214AaE9e769386582D10909DB09C3
