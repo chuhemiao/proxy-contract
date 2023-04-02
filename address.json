@@ -1,0 +1,14 @@
+{
+  "localhost": {
+    "ProxyAdmin": "0xf87eeA0652c0c12B39fC81E927a3855b07022602",
+    "Proxy": "0x94f837e35a1393b0e1E6503780e7d7cAD8F29699",
+    "StandardImpl": "0xeFcd59583ADAB476de049d6E7e3582bD0df9E3Ca",
+    "StandardImplV2": "0x9AAA4C0EeA5251b1d23666A41a6affe5B4dC9be4"
+  },
+  "BSCTest": {
+    "ProxyAdmin": "0xf87eeA0652c0c12B39fC81E927a3855b07022602",
+    "Proxy": "0x94f837e35a1393b0e1E6503780e7d7cAD8F29699",
+    "StandardImpl": "0xeFcd59583ADAB476de049d6E7e3582bD0df9E3Ca",
+    "StandardImplV2": "0x9AAA4C0EeA5251b1d23666A41a6affe5B4dC9be4"
+  }
+}

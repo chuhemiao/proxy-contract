@@ -3,13 +3,13 @@
 pragma solidity ^0.8.10;
 
 contract StandardImplv2 {
-    uint256 public constant VERSION = 2;
+    uint256 public constant VERSION = 4;
     // uint256 public constant VERSION = 2;
 
     bool public initialized;
 
     uint256 public value;
-    mapping (address => uint256) name;
+    mapping(address => uint256) name;
 
     modifier initializer() {
         require(!initialized, "Only initialize once");
@@ -22,7 +22,7 @@ contract StandardImplv2 {
     }
 
     function setValue(uint256 _newValue) public {
-        value = _newValue * 2;
+        value = _newValue * 3;
         name[msg.sender] = value;
     }
 

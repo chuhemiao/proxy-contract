@@ -3,7 +3,7 @@
 pragma solidity ^0.8.10;
 
 contract StandardImpl {
-    uint256 public constant VERSION = 1;
+    uint256 public constant VERSION = 3;
     // uint256 public constant VERSION = 2;
 
     bool public initialized;

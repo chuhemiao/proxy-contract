@@ -1,64 +1,61 @@
-import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
+import '@nomicfoundation/hardhat-toolbox';
+import { HardhatUserConfig } from 'hardhat/config';
 
-import "hardhat-deploy"
-import * as dotenv from "dotenv";
+import * as dotenv from 'dotenv';
+import 'hardhat-deploy';
+import './tasks';
 dotenv.config();
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.18",
+    version: '0.8.18',
     settings: {
       optimizer: {
         enabled: true,
-        runs: 200,
-      },
-    },
+        runs: 200
+      }
+    }
   },
   namedAccounts: {
     deployer: {
       default: 0,
-      localhost: 0,
-    },
+      localhost: 0
+    }
   },
   // Default network when you don't specify "--network {network_name}"
-  defaultNetwork: "hardhat",
+  defaultNetwork: 'hardhat', //BSCTest
   networks: {
     hardhat: {},
     localhost: {
-      url: "http://localhost:8545",
+      url: 'http://localhost:8545'
     },
     goerli: {
-      url: "https://goerli.infura.io/v3/" + process.env.INFURA_KEY,
+      url: 'https://goerli.infura.io/v3/' + process.env.INFURA_KEY,
       chainId: 97,
       accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      // {
-      //  mnemonic: process.env.MNEMONIC,
-      //  count: 20,
-      //}
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
     },
-    bnbtest: {
-      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
-      chainId: 97,
+    BSCTest: {
+      url: 'https://bsc-testnet.public.blastapi.io',
       accounts:
-      process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
     }
   },
   etherscan: {
-    apiKey: {
-      bscTestnet: 'YA6W2S9IT14TBDN6894ZCXXCFD6KREJIE9'
-    }
+    apiKey:
+      process.env.ETHERSCAN_API_KEY !== undefined
+        ? process.env.ETHERSCAN_API_KEY
+        : '' // Your Etherscan API key
   },
   paths: {
-    sources: "./contracts",
-    tests: "./test",
-    cache: "./cache",
-    artifacts: "./artifacts",
-    deploy: "./deploy",
+    sources: './contracts',
+    tests: './test',
+    cache: './cache',
+    artifacts: './artifacts',
+    deploy: './deploy'
   },
   mocha: {
-    timeout: 20000,
-  },
+    timeout: 20000
+  }
 };
 
 export default config;
